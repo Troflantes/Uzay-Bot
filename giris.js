@@ -63,29 +63,11 @@ client.on('message', msg => {
             .addField("Bot Sayısı", sunucu.members.filter(m => m.user.bot).size, )
         return msg.channel.send(embed)
     }
-    if (msg.content === prefix + "rastgelerenk") {
-        function get_random(list) {
-            return list[Math.floor((Math.random() * list.length))];
-        }
-
-        var color1 = "85cfff"
-        var color2 = "ffffff"
-        var color3 = "ff5199"
-
-        let color = [color1, color2, color3]
-        let sonuc = get_random(color)
-
-        let embed = new Discord.RichEmbed()
-            .setColor("0x" + sonuc)
-            .setTitle("Rastgele Renk")
-            .setDescription("#" + sonuc)
-        return msg.channel.send(embed)
-    }
     if (msg.content === prefix + 'yardım') {
         let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setTitle('» Genel Komutlar')
-        .setDescription('**bilgi** : Botla Ilgili Bilgileri Gosterir.\n**sunucubilgi** : Sunucu Bilgisini Gosterir.\n**rastgelerenk** : Rastgele Renk Atar.\n**id** : Kendi ID Ogrenirsin.\n**yaz** : Bota Isdedini Yazdirirsin.\n**ping** : Botun Ping Gosterir.\n**bot-bilgi**: Bot Bilgilerini Gosterir.')
+        .setDescription('**bilgi** : Botla Ilgili Bilgileri Gosterir.\n**sunucubilgi** : Sunucu Bilgisini Gosterir.\n**id** : Kendi ID Ogrenirsin.\n**yaz** : Bota Isdedini Yazdirirsin.\n**ping** : Botun Ping Gosterir.\n**bot-bilgi**: Bot Bilgilerini Gosterir.')
         .setFooter('Uzay Yardım Sistemi')
         return msg.channel.send(embed)
     }
